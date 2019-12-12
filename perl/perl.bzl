@@ -16,7 +16,7 @@
 
 _perl_file_types = [".pl", ".pm", ".t"]
 
-_perl_srcs_attr = attr.label_list(allow_files = _perl_file_types)
+_perl_srcs_attr = attr.label_list(allow_files = True)
 
 _perl_deps_attr = attr.label_list(
     allow_files = False,
@@ -28,7 +28,7 @@ _perl_data_attr = attr.label_list(
 )
 
 _perl_main_attr = attr.label(
-    allow_single_file = _perl_file_types,
+    allow_single_file = True,
 )
 
 _perl_env_attr = attr.string_dict()
